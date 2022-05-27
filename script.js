@@ -106,14 +106,14 @@ window.onload = () => {
   }
 };
 
-// (13) dois eventos distintos de click nos botoes com id mover-cima e mover-baixo / percorre a ul e checa se o elemento em questao tem o background 'grey' / caso verdadeiro salva as caracteristicas deste elemento no objeto 'info' / troca de lugar a li com a imediatamente acima ou abaixo, salvando os dados dessa outra li em um placeholder para reaplicar
+// (13) dois eventos distintos de click nos botoes com id mover-cima e mover-baixo / percorre a ul e checa se o elemento em questao tem o background 'grey' e se nào é o primeiro ou ultimo da lista / caso verdadeiro salva as caracteristicas deste elemento no objeto 'info' e as caracteristicas do elemento que vai ser trocado no objeto info2 / troca de lugar a li com a imediatamente acima ou abaixo
 
 // eslint-disable-next-line max-lines-per-function
 function moveLiUp() {
   let info = {};
   let info2 = {};
   for (let index = 0; index < listaDeTarefas.childElementCount; index += 1) {
-    if (listaDeTarefas.children[index].style.background === 'gray') {
+    if (listaDeTarefas.children[index].style.background === 'gray' && index !== 0) {
       info = {
         text: listaDeTarefas.children[index].innerText,
         class: listaDeTarefas.children[index].className,
@@ -139,8 +139,9 @@ function moveLiUp() {
 function moveLiDown() {
   let info = {};
   let info2 = {};
-  for (let index = 0; index < listaDeTarefas.childElementCount; index += 1) {
-    if (listaDeTarefas.children[index].style.background === 'gray') {
+  for (let index = listaDeTarefas.childElementCount - 1; index >= 0; index -= 1) {
+    if (listaDeTarefas.children[index].style.background === 'gray' && index !== listaDeTarefas.childElementCount - 1) {
+      console.log('teste');
       info = {
         text: listaDeTarefas.children[index].innerText,
         class: listaDeTarefas.children[index].className,
