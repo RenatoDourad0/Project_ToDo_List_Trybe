@@ -18,8 +18,9 @@ This is a solution to the ToDo List project from the fundamentals module of Tryb
 
 ### The project
 
-Users should be able to:
+Create a todo list web page with the specifications below:
 
+Users should be able to
 - Add new items to the list;
 - Select an item;
 - Mark an item as done;
