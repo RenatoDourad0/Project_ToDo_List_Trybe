@@ -10,6 +10,7 @@ const btnMoverParaBaixo = document.getElementById('mover-baixo');
 // (5,6) Evento de clique no botao 'adicionar item' / Cria novo 'li' / checa se o valor do 'input' e diferente de '' / adiciona o valor do 'input' ao texto da 'li' / adiciona 'li' ao 'ul' / limpa valor do 'input'
 
 btnCriar.addEventListener('click', () => {
+  listaDeTarefas.className = 'displayShow';
   const input = document.getElementById('texto-tarefa');
   const newLi = document.createElement('li');
   if (input.value !== '') {
@@ -25,11 +26,10 @@ listaDeTarefas.addEventListener('click', (event) => {
   const element = event.target;
   for (let index = 0; index < listaDeTarefas.children.length; index += 1) {
     if (listaDeTarefas.children[index].style.background === 'gray') {
-      listaDeTarefas.children[index].style.background = 'white';
+      listaDeTarefas.children[index].style.background = 'rgba(128, 128, 128, 0.459)';
     }
+    element.style.background = 'gray';
   }
-  element.style.background = 'gray';
-
   // tentativa de tirar a cor cinza caso o elemento ja tenha fundo cinza / nào funciona pois o for acima troca a cor de todos elementos para branco, fazendo com que a  condicao abaixo seja sempre falsa.
   // if (element.style.background === 'gray') {
   //   element.style.background = 'white';

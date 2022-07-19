@@ -1,3 +1,100 @@
+body {
+  background-image: linear-gradient(to bottom right,rgba(255, 208, 0, 0.246), rgba(0, 128, 0, 0.265));
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+}
+
+header p {
+  width: fit-content;
+  margin: auto;
+  background-color: rgba(128, 128, 128, 0.185);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.667);
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+header div {
+  width: 20%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+input {
+  border: none;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 5px;
+  line-height: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(128, 128, 128);
+  color:white;
+}
+
+button {
+  border: none;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 5px;
+  line-height: 18px;
+}
+
+#lista-tarefas {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(128, 128, 128, 0.185);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.667);
+}
+
+li {
+  margin: 3px;
+  padding: 3px 10px;
+  background-color: rgba(128, 128, 128, 0.459);
+  border-radius: 5px;
+}
+
+footer {
+  position: absolute;
+  width: 50%;
+  right: 25%;
+  bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:100px;
+  background-color: rgba(128, 128, 128, 0.185);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.667);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayShow {
+  display: block;
+}
+
 .completed {
-  text-decoration: line-through solid black;
+  text-decoration: 2px line-through solid black;
+  background-color: rgba(128, 128, 128, 0.459);
 }
