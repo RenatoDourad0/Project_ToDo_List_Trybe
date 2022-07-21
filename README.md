@@ -57,3 +57,4 @@ Users should be able to
 - [GitHub](https://github.com/RenatoDourad0)
 - [Linkedin](www.linkedin.com/in/renato-dourado-b1b301112)
 
+Contributors besides Renato were responsible for evaluation files that have been removed after approval.
